@@ -24,8 +24,8 @@ Manually add [lovelace-iphone-xs-card.js] and [iphone_xs.png]
 to your `<config>/www/lovelace-iphone-xs-card` folder and add the following to your `configuration.yaml` file:
 ```yaml
 resources:
-  - type: module
-    url: /local/lovelace-iphone-xs-card/lovelace-iphone-xs-card.js
+  - url: /local/lovelace-iphone-xs-card/lovelace-iphone-xs-card.js
+    type: module
 ```
 
 
