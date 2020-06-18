@@ -1,0 +1,49 @@
+  - platform: template
+    sensors:
+      tomas_iphone_xs:
+        friendly_name_template: >-
+          {{ state_attr('device_tracker.tomas_iphone', 'friendly_name') }}
+        value_template: >-
+          {{ states.device_tracker.tomas.state }}
+        icon_template: mdi:cellphone-iphone
+        attribute_templates:
+          battery: >-
+            {{ state_attr('device_tracker.tomas', 'battery') }}
+          battery_charging: >-
+            {% if state_attr('device_tracker.tomas', 'battery_charging') %}
+              true
+            {% else %}
+              false
+            {% endif %}
+          battery_status: >-
+            {{ state_attr('device_tracker.tomas_iphone_icloud_xs', 'battery_status') }}
+          moving: >-
+            {% if state_attr('device_tracker.tomas', 'moving') %}
+              true
+            {% else %}
+              false
+            {% endif %}
+          wifi_on: >-
+            {% if state_attr('device_tracker.tomas', 'wifi_on') %}
+              true
+            {% else %}
+              false
+            {% endif %}
+          entity_picture: >-
+            {{ state_attr('device_tracker.tomas_iphone_nmap', 'entity_picture') }}
+          gps_accuracy: >-
+            {{ state_attr('device_tracker.tomas', 'gps_accuracy') }}
+          bssid: >-
+            {{ states.sensor.tomas_iphone_bssid.state }}
+          ip: >-
+            {{ state_attr('device_tracker.tomas_iphone_nmap', 'ip') }}
+          sim_1: >-
+            {{ states.sensor.tomas_iphone_sim_1.state }}
+          sim_2: >-
+            {% if states.sensor.tomas_iphone_sim_2.state is defined %}
+              {{ states.sensor.tomas_iphone_sim_2.state }}
+            {% else %}
+              Not present
+            {% endif %}
+          device_type: >-
+            {{ state_attr('device_tracker.tomas_iphone_icloud_xs', 'device_name') }}
