@@ -225,31 +225,31 @@
           const value = (this.stateObj && this.state.attributes['battery'] in this.stateObj.attributes)
               ? this.stateObj.attributes[this.state.attributes['battery']]
               : (this._hass ? this._hass.localize('state.default.unavailable') : 'Unavailable');
-          if(value === this._hass.localize('state.default.unavailable') || value === 'Unavailable'){
-            return 'rgba(119, 119, 119, 0.7)';
-          } else if(Number(value) < 11){
-            return 'rgba(255, 0, 0, 0.7)';
-          } else if(Number(value) < 21){
-            return 'rgba(255, 153, 0, 0.7)';
-          } else if(Number(value) < 31){
-            return 'rgba(255, 153, 0, 0.7)';
-          } else if(Number(value) < 41){
-            return 'rgba(255, 153, 0, 0.7)';
-          } else if(Number(value) < 51){
-            return 'rgba(255, 153, 0, 0.7)';
-          } else if(Number(value) < 61){
-            return 'rgba(255, 153, 0, 0.7)';
-          } else if(Number(value) < 71){
-            return 'rgba(255, 153, 0, 0.7)';
-          } else if(Number(value) < 81){
-            return 'rgba(255, 153, 0, 0.7)';
-          } else if(Number(value) < 91){
-            return 'rgba(255, 153, 0, 0.7)';
-          } else if(Number(value) < 96){
-            return 'rgba(255, 153, 0, 0.7)';
-          } else {
-            return 'rgba(31, 184, 0, 0.7)';
-          }
+            if(value === this._hass.localize('state.default.unavailable') || value === 'Unavailable' || value === 'None'){
+              return 'rgba(119, 119, 119, 0.75)'; // unavailable || none
+            } else if(Number(value) < 11){ // below 11
+              return 'rgba(213, 0, 0, 0.75)';
+            } else if(Number(value) < 21){ // below 21
+              return 'rgba(244, 67, 54, 0.75)';
+            } else if(Number(value) < 31){ // below 31
+              return 'rgba(221, 44, 0, 0.75)';
+            } else if(Number(value) < 41){ // below 41
+              return 'rgba(230, 81, 0, 0.75)';
+            } else if(Number(value) < 51){ // below 51
+              return 'rgba(255, 109, 0, 0.75)';
+            } else if(Number(value) < 61){ // below 61
+              return 'rgba(245, 124, 0, 0.75)';
+            } else if(Number(value) < 71){ // below 71
+              return 'rgba(255, 193, 7, 0.75)';
+            } else if(Number(value) < 81){ // below 81
+              return 'rgba(255, 214, 0, 0.75)';
+            } else if(Number(value) < 91){ // below 91
+              return 'rgba(174, 234, 0, 0.75)';
+            } else if(Number(value) < 96){ // below 91
+              return 'rgba(100, 221, 23, 0.75)';
+            } else { // else
+              return 'rgba(118, 255, 3, 0.75)';
+            }
       };
 
       getBatteryPercentage() {
