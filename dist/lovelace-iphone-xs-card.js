@@ -14,6 +14,11 @@ import { LitElement, html, css } from "https://unpkg.com/lit-element@2.0.1/lit-e
 
       static get styles() {
           return css`
+            @-webkit-keyframes flashing {
+              0%   { opacity: 1.0; }
+              50%  { opacity: 0.0; }
+              100% { opacity: 1.0; }
+            }
             .background {
               background-repeat: no-repeat;
               background-position: center center;
@@ -140,6 +145,7 @@ import { LitElement, html, css } from "https://unpkg.com/lit-element@2.0.1/lit-e
               width: 85%;
               height: auto;
               vertical-align: text-bottom;
+              animation: flashing 4s ease infinite;
             }
           `;
       }
@@ -185,7 +191,7 @@ import { LitElement, html, css } from "https://unpkg.com/lit-element@2.0.1/lit-e
 
                 ${this.state.showPlug ? html`
                 <div class="plug-box" style="${this.getValueState('battery_charging') !== 'true' ? 'display: none;' : ''}">
-                  <img class="plug image-invert" src="/hacsfiles/lovelace-iphone-xs-card/plug.png" alt="Plug" />
+                  <img class="plug image-invert" src="/hacsfiles/lovelace-iphone-xs-card/charge.png" alt="Plug" />
                 </div>
                 ` : null}
             </div>
@@ -210,14 +216,6 @@ import { LitElement, html, css } from "https://unpkg.com/lit-element@2.0.1/lit-e
                 }
             } else {
               return `OFF`;
-            }
-          }
-
-          if(field === 'battery'){
-            if(this.getValueState('battery_charging') === 'true'){
-              return html`&sim; ${value}`;
-            } else {
-              return `${value}`;
             }
           }
 
