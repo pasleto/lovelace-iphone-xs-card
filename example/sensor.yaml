@@ -33,8 +33,8 @@
             {{ state_attr('device_tracker.tomas_iphone_nmap', 'entity_picture') }}
           gps_accuracy: >-
             {{ state_attr('device_tracker.tomas', 'gps_accuracy') }}
-          bssid: >-
-            {{ states.sensor.tomas_iphone_bssid.state }}
+          ssid: >-
+            {{ states.sensor.tomas_iphone_ssid.state }}
           ip: >-
             {{ state_attr('device_tracker.tomas_iphone_nmap', 'ip') }}
           sim_1: >-
