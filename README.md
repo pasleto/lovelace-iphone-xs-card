@@ -2,7 +2,7 @@
     Lovelace Apple iPhone XS Card
 </h1>
 
-HA Lovelace Card for Apple iPhone XS / X / XR / 11 using sensors data
+HA Lovelace Card for Apple iPhone XS / X / XR / 11 / 12 using sensors data
 
 
 <p align="center">
