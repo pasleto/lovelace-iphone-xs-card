@@ -29,13 +29,6 @@ resources:
 ```
 
 
-
-**TODO** - dynamic color ranges on battery percentage
-
-README update coming soon ...
-
-
-
 [hacs]: https://github.com/custom-components/hacs
 [lovelace-iphone-xs-card.js]: https://raw.githubusercontent.com/pasleto/lovelace-iphone-xs-card/master/dist/lovelace-iphone-xs-card.js
 [iphone_xs.png]: https://raw.githubusercontent.com/pasleto/lovelace-iphone-xs-card/master/dist/iphone_xs.png
