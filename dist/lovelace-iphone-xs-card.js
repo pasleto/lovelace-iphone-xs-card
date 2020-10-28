@@ -1,6 +1,4 @@
-((LitElement) => {
-  const html = LitElement.prototype.html;
-  const css = LitElement.prototype.css;
+import { LitElement, html, css } from "https://unpkg.com/lit-element@2.0.1/lit-element.js?module";
 
   class IphoneXsCard extends LitElement {
 
@@ -16,135 +14,134 @@
 
       static get styles() {
           return css`
-          
-      .background {
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-      }
-      .avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-bottom: 5px;
-      }
-      .image-box {
-        display: flex; 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-weight: 700;
-        font-size: 16px;
-        text-align: center;
-        margin-bottom: 10px;
-      }
-      .sim {
-        width: 15px;
-        height: 20px;
-        vertical-align: text-bottom;
-        padding-right: 5px;
-      }
-      .device-type {
-        width: 15px;
-        height: 20px;
-        vertical-align: text-bottom;
-        padding-right: 5px;
-      }
-      .wifi {
-        width: 15px;
-        height: 20px;
-        vertical-align: text-bottom;
-        padding-right: 5px;
-      }
-      .battery-box {
-        justify-content: center;
-        align-items: center;
-        font-weight: 700;
-        font-size: 16px;
-        text-align: center;
-        margin-top: 6px;
-      }
-      .battery {
-        width: 85%;
-        height: auto;
-        vertical-align: text-bottom;
-      }
-      .battery-fill-box {
-        width: 70%;
-        height: 40px;
-        margin-top: -45px;
-        margin-left: 15px;
-        border-radius: 5px;
-      }
-      .battery-fill {
-        height: 100%;
-        border-radius: 5px;
-      }
-      .battery-fill-text {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: -40px;
-      }
-      .image-invert {
-        filter: var(--image-invert-colors);
-      }
-      .content {
-        cursor: pointer;
-        color: var(--primary-text-color);
-        text-shadow: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 140px;
-        margin-left: auto;
-        margin-right: auto;
-        min-height: 300px;
-        max-height: 350px;
-        height: 100vh;
-      }
-      .grid-container {
-        width: 85%;
-        display: grid;
-        grid-template-columns: 25px auto;
-        grid-template-rows: min-content;
-        gap: 0px 0px;
-        margin-bottom: 5px;
-        font-weight: 700;
-        font-size: 16px;
-      }
-      .icon { 
-        grid-area: 1 / 1 / 2 / 2; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .text { 
-        grid-area: 1 / 2 / 2 / 3; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .text span {
-        margin-top: 1px;
-        margin-bottom: -2px;
-      }
-      .plug-box {
-        justify-content: center;
-        align-items: center;
-        font-weight: 700;
-        font-size: 16px;
-        text-align: center;
-        margin-top: 4px;
-      }
-      .plug {
-        width: 85%;
-        height: auto;
-        vertical-align: text-bottom;
-      }
-      `;
+            .background {
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: contain;
+            }
+            .avatar {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-bottom: 5px;
+            }
+            .image-box {
+              display: flex; 
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              font-weight: 700;
+              font-size: 16px;
+              text-align: center;
+              margin-bottom: 10px;
+            }
+            .sim {
+              width: 15px;
+              height: 20px;
+              vertical-align: text-bottom;
+              padding-right: 5px;
+            }
+            .device-type {
+              width: 15px;
+              height: 20px;
+              vertical-align: text-bottom;
+              padding-right: 5px;
+            }
+            .wifi {
+              width: 15px;
+              height: 20px;
+              vertical-align: text-bottom;
+              padding-right: 5px;
+            }
+            .battery-box {
+              justify-content: center;
+              align-items: center;
+              font-weight: 700;
+              font-size: 16px;
+              text-align: center;
+              margin-top: 6px;
+            }
+            .battery {
+              width: 85%;
+              height: auto;
+              vertical-align: text-bottom;
+            }
+            .battery-fill-box {
+              width: 70%;
+              height: 40px;
+              margin-top: -45px;
+              margin-left: 15px;
+              border-radius: 5px;
+            }
+            .battery-fill {
+              height: 100%;
+              border-radius: 5px;
+            }
+            .battery-fill-text {
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: -40px;
+            }
+            .image-invert {
+              filter: var(--image-invert-colors);
+            }
+            .content {
+              cursor: pointer;
+              color: var(--primary-text-color);
+              text-shadow: none;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              max-width: 140px;
+              margin-left: auto;
+              margin-right: auto;
+              min-height: 300px;
+              max-height: 350px;
+              height: 100vh;
+            }
+            .grid-container {
+              width: 85%;
+              display: grid;
+              grid-template-columns: 25px auto;
+              grid-template-rows: min-content;
+              gap: 0px 0px;
+              margin-bottom: 5px;
+              font-weight: 700;
+              font-size: 16px;
+            }
+            .icon { 
+              grid-area: 1 / 1 / 2 / 2; 
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .text { 
+              grid-area: 1 / 2 / 2 / 3; 
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .text span {
+              margin-top: 1px;
+              margin-bottom: -2px;
+            }
+            .plug-box {
+              justify-content: center;
+              align-items: center;
+              font-weight: 700;
+              font-size: 16px;
+              text-align: center;
+              margin-top: 4px;
+            }
+            .plug {
+              width: 85%;
+              height: auto;
+              vertical-align: text-bottom;
+            }
+          `;
       }
 
       render() {
@@ -323,4 +320,3 @@
   }
 
   customElements.define('iphone-xs-card', IphoneXsCard);
-})(window.LitElement || Object.getPrototypeOf(customElements.get("hui-view")));
