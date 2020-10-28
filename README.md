@@ -8,6 +8,7 @@ HA Lovelace Card for Apple iPhone XS / X / XR / 11 / 12 using sensors data
 <p align="center">
     <img src="https://raw.githubusercontent.com/pasleto/lovelace-iphone-xs-card/master/example/card_example.png" alt="Example"/>
 </p>
+This was first edition of this card, now looks more better :)
 
 ## Setup
 
